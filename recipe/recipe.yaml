@@ -13,14 +13,6 @@ source:
   sha256: b32a3def78b0b75a2fd74ee6a63fb4a79cb6273fe31a570362e4e1871fa446da
   patches:
     - fix_osx.diff
-    # Backport of upstream a819808ca4dd (doxygen/doxygen#12116): the new
-    # 1.17.0 tagfile test only stripped the version when doxygen_gitid was
-    # present, which it isn't for tarball builds (no .git directory). Drop
-    # once it ships in a doxygen release.
-    - tagfile_test.patch
-    # https://github.com/doxygen/doxygen/issues/10055
-    - if: osx
-      then: macos.patch
 
 build:
   number: 0
