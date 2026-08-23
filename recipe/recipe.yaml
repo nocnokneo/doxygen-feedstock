@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: doxygen
-  version: "1_18_0"
+  version: "1.18.0"
 
 package:
   name: ${{ name|lower }}
